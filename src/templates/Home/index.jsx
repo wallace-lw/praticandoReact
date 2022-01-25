@@ -1,4 +1,4 @@
-import { Component } from 'react/cjs/react.production.min';
+import { Component } from 'react';
 
 import './styles.css';
 
@@ -43,6 +43,7 @@ import { Button } from '../../components/Button';
 
     this.setState({ posts, page: nextPage })
   }
+
     render(){
       const { posts, page, postsPerPage, allPosts } = this.state;
       const noMorePosts = page + postsPerPage >= allPosts.length;
