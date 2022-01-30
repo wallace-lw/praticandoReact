@@ -8,7 +8,7 @@ export const loadPosts = async () => {
     const  photosJson = await photos.json();
 
     const postsAndPhotos = postsJson.map((post, index)=>{
-       return { ...post, cover: photosJson[index].url }
+       return {...post, cover: photosJson[index].url }
     });  
     return postsAndPhotos;
 }
